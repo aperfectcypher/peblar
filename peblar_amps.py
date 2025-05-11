@@ -6,10 +6,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-url = sys.argv[1]
+ip = sys.argv[1]
+url = f"http://{ip}/system/3"
 password = sys.argv[2]
 if len(sys.argv) != 3:
-    print("Usage: python peblar_amps.py <url> <password>")
+    print("Usage: python peblar_amps.py <ip> <password>")
     sys.exit(1)
     
 os.environ['MOZ_HEADLESS'] = '1'
